@@ -4,7 +4,7 @@ import os
 import json
 import requests
 
-JAEGER_TRACES_ENDPOINT = "http://localhost:16686/jaeger/api/traces?limit=20000&"
+JAEGER_TRACES_ENDPOINT = "http://localhost:16686/api/traces?limit=20000&"
 JAEGER_TRACES_PARAMS = "service="
 
 def get_traces(service):
@@ -22,7 +22,7 @@ def get_traces(service):
     traces = response["data"]
     return traces
 
-JAEGER_SERVICES_ENDPOINT = "http://localhost:16686/jaeger/api/services"
+JAEGER_SERVICES_ENDPOINT = "http://localhost:16686/api/services"
 
 def get_services():
     """
